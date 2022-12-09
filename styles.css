@@ -133,7 +133,7 @@ p {
 }
 #header {
 	height: 200px;
-	background-image: url(img/header.jpg);
+	background-image: url(./img/header.jpg);
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-position: left top;
@@ -180,7 +180,7 @@ p {
 	top: 200px;
 	margin: 0px;
 	padding: 0px;
-	background-image: url(img/topmenu.jpg);
+	background-image: url(./img/topmenu.jpg);
 	background-position: left top;
 	font-size: 13px;
 }
@@ -195,7 +195,7 @@ p {
 	float: left;
 	height: 45px;
 	_height:47px;
-	background-image: url(img/menu_item.jpg);
+	background-image: url(./img/menu_item.jpg);
 	background-repeat: repeat-x;
 	margin: 0px;
 	padding: 0px;
@@ -203,7 +203,7 @@ p {
 	display: block;
 }
 #topmenu span a:hover {
-	background-image: url(img/menu_item_hover.jpg);
+	background-image: url(./img/menu_item_hover.jpg);
 	background-position: right top;
 	color: #FFFFFF;
 }
@@ -347,7 +347,7 @@ h1 {
 #main h4  {
 	font-size: 16px;
 	line-height: 34px;
-	background-image: url(img/h4.jpg);
+	background-image: url(./img/h4.jpg);
 	background-repeat: no-repeat;
 	margin-top: 15px;
 	margin-bottom: 10px;
@@ -359,7 +359,7 @@ h1 {
 	color: #DE2147;
 }
 #main  h5{
-	background-image: url(img/h5.jpg);
+	background-image: url(./img/h5.jpg);
 	background-position: left 2px;
 	background-repeat: no-repeat;
 	font-size: 15px;
@@ -369,7 +369,7 @@ h1 {
 	margin-bottom: 3px;
 }
 #main  h6{
-	background-image: url(img/h6.jpg);
+	background-image: url(./img/h6.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 20px;
@@ -421,7 +421,7 @@ h1 {
 	overflow: hidden;
 }
 #sitemaps .l2 {
-	background-image: url(img/sitemap_l2.jpg);
+	background-image: url(./img/sitemap_l2.jpg);
 	background-repeat: no-repeat;
 	background-position: left 4px;
 	line-height: 20px;
@@ -430,7 +430,7 @@ h1 {
 	margin-bottom: 3px;
 }
 #sitemaps .l3 {
-	background-image: url(img/sitemap_l3.jpg);
+	background-image: url(./img/sitemap_l3.jpg);
 	background-repeat: no-repeat;
 	background-position: left 4px;
 	line-height: 20px;
@@ -440,7 +440,7 @@ h1 {
 }
 #whatsnew {
 	border: 1px solid #CCCCCC;
-	background-image: url(img/whats_top.jpg);
+	background-image: url(./img/whats_top.jpg);
 	background-repeat: no-repeat;
 	background-position: left top;
 	padding-top: 45px;
@@ -450,7 +450,7 @@ h1 {
 }
 #whatsnew  li  {
 	line-height: 25px;
-	list-style-image: url(img/whats_li.jpg);
+	list-style-image: url(./img/whats_li.jpg);
 	margin-right: 10px;
 	margin-left: 10px;
 }
@@ -469,7 +469,7 @@ h1 {
 }
 #categorylist h4 {
 	clear: none;
-	background-image: url(img/categorylist.jpg);
+	background-image: url(./img/categorylist.jpg);
 	background-repeat: no-repeat;
 	font-size: 15px;
 	height: 30px;
@@ -501,7 +501,7 @@ h1 {
 	padding-bottom: 5px;
 }
 #categorylist .bottom {
-	background-image: url(img/categorylist_bottom.jpg);
+	background-image: url(./img/categorylist_bottom.jpg);
 	background-repeat: no-repeat;
 	background-position: center bottom;
 }
@@ -542,7 +542,7 @@ h1 {
 }
 /* 記事スタイル */
 .txt-border {
-	background-image: url(img/dott.gif);
+	background-image: url(./img/dott.gif);
 	line-height: 22px;
 	font-size: 13px;
 	margin: 10px;
@@ -724,7 +724,7 @@ h1 {
 	display: block;
 	font-size: 12px;
 	text-decoration: none;
-	background-image: url(img/menu_bg.gif);
+	background-image: url(./img/menu_bg.gif);
 	background-repeat: no-repeat;
 	background-position: 5px center;
 	background-color: #FFFFFF;
@@ -766,7 +766,7 @@ h1 {
 	padding-right: 0px;
 	padding-bottom: 1px;
 	padding-left: 0px;
-	background-image: url(img/menu_line.gif);
+	background-image: url(./img/menu_line.gif);
 	background-position: left bottom;
 	font-size: 11px;
 }
@@ -777,7 +777,7 @@ h1 {
 	font-size: 11px;
 }
 #newEntry   li   a,#newEntry  li a:hover {
-	background-image: url(img/newtext.gif);
+	background-image: url(./img/newtext.gif);
 	padding-left: 30px;
 	background-position: 10px center;
 }
@@ -811,7 +811,7 @@ h1 {
 	padding:15px;
 }
 #searchresult dt{
-	background-image: url(img/entlist.jpg);
+	background-image: url(./img/entlist.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	margin-top:15px;
@@ -882,13 +882,13 @@ h1 {
 .blog  .more  {
 	float: right;
 	padding-left: 15px;
-	background-image: url(img/entlist.jpg);
+	background-image: url(./img/entlist.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	font-weight: bold;
 }
 .blog .date {
-	background-image: url(img/calender.jpg);
+	background-image: url(./img/calender.jpg);
 	background-repeat: no-repeat;
 	background-position: left center;
 	line-height: 22px;
@@ -930,7 +930,7 @@ h1 {
 	list-style-image: none;
 	margin: 0px;
 	display: inline;
-	background-image: url(img/line.gif);
+	background-image: url(./img/line.gif);
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-top: 0px;
