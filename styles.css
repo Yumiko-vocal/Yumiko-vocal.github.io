@@ -11,7 +11,8 @@ body {
 	font-size: 0.9em;
 	line-height: 180%;
 	background-color: #F5F5F5;
-		background-image: url(./img/118cd96f09e2ceef7200637da516d48d_m-1.jpg);
+		/*background-image: url(./img/118cd96f09e2ceef7200637da516d48d_m-1.jpg);*/
+		background-image: url(https://github.com/Yumiko-vocal/Yumiko-vocal.github.io/blob/main/img/118cd96f09e2ceef7200637da516d48d_m-1.jpeg?raw=true);
 		background-repeat: repeat-x;
 	background-color: #D59C54;
 	font-size: 16px;
@@ -220,7 +221,8 @@ p {
 	padding-bottom: 20px;
 	min-height:400px;
 	margin-top:50px;
-	background-image: url(./img/contents_bg_left.jpg);
+	/*background-image: url(./img/contents_bg_left.jpg);*/
+	background-image: url(https://github.com/Yumiko-vocal/Yumiko-vocal.github.io/blob/main/img/contents_bg_left.jpeg?raw=true);
 	background-repeat: repeat-y;
 	background-position: left;
 	margin-top:0px;
@@ -706,7 +708,8 @@ h1 {
 }
 #menu h4 ,#rmenu h4 ,.menutitle {
 	line-height: 30px;
-	background-image: url(img/menu_h4.jpg);
+	/*background-image: url(img/menu_h4.jpg);*/
+	background-image: url(https://github.com/Yumiko-vocal/Yumiko-vocal.github.io/blob/main/img/menu_h4.jpeg?raw=true);
 	height: 30px;
 	font-size:14px;
 	color: #FFFFFF;
