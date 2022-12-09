@@ -1,0 +1,307 @@
+table{
+	width:100%;
+	_width:95%;
+	font-size:13px;
+	margin-top:10px;
+	margin-bottom:10px;
+}
+th{
+	background-color:#EBEBEB;
+}
+td{
+	background-color:#FFFFFF;
+}
+#menu .ritem td,#rmenu .ritem td{
+	border:none;
+}
+/*　共通スタイル */
+.rtitle  {
+	height: 44px;
+	text-align: center;
+	overflow: hidden;
+	padding: 4px;
+}
+.rimg {
+	text-align: center;
+}
+.price {
+	color: #CC0000;
+	font-weight: bold;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	font-size: 120%;
+	text-align: center;
+}
+.tdesc {
+	text-align: left;
+	vertical-align: top;
+}
+
+/* 商品陳列型 */
+.ritm
+{
+	background-color:#FFFFFF;
+}
+.ritm th,.ritm td
+{
+	padding:6px;
+	width:auto;
+	line-height: 120%;
+	border:solid 1px #CCC;
+	vertical-align:top;
+	text-align: center;
+}
+.col1 td ,.col1 th{
+	width: 100%;
+}
+.col2 td ,.col2 th{
+	width: 50%;
+}
+.col3 td ,.col3 th{
+	width: 33%;
+}
+.col4 td ,.col4 th{
+	width: 25%;
+}
+/* 特定取引法に関する表記 */
+.tokusho {
+	background-color: #CCCCCC;
+}
+.tokusho th, .tokusho td {
+	padding: 8px;
+}
+.tokusho th {
+	background-color: #E3E3E3;
+	width: 30%;
+}
+/* 商品説明 */
+.ritm_desc {
+	border: 1px solid #CCCCCC;
+}
+.ritm_desc td {
+	vertical-align: top;
+	padding: 10px;
+}
+.ritm_desc .title {
+	background-color: #EBEBEB;
+	padding: 5px;
+	margin-bottom: 8px;
+	text-align:left;
+	line-height:120%;
+	font-family: 'HGP創英角ｺﾞｼｯｸUB', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', sans-serif;
+	font-weight:normal;
+}
+.ritm_desc .title a{
+	color:#333;
+}
+.ritm_desc .title a:hover{
+	color:#FF0000;
+}
+.ritm_desc .desc{
+	padding:20px;
+}
+.ritm_desc .price {
+	text-align: left;
+	padding: 0px;
+}
+.ritm_desc  .img {
+	width: 20%;
+}
+.ritm_desc .more, .ritm_desc .price, .ritm_desc .review {
+	line-height: 25px;
+	height: 25px;
+	margin-right: 5px;
+	margin-left: 5px;
+}
+
+/* ▼1/18以降追加分 */
+/* ランキング1 */
+.rnk1item {
+	border: 1px solid #CCCCCC;
+}
+.rnk1item  th {
+	background-color: #FFFFFF;
+	width: 70px;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.rnk1item td {
+	background-color: #FFFFFF;
+	vertical-align: top;
+	font-size: 12px;
+	line-height: 130%;
+	padding-top: 15px;
+	padding-right: 10px;
+	padding-bottom: 15px;
+	padding-left: 10px;
+}
+.rnk1item .ttitle {
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 12px;
+	line-height: 130%;
+}
+.rnk1item th, .rnk1item td {
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCCCCC;
+}
+.rnk1item .timg {
+	width: 130px;
+	padding-top: 20px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	padding-left: 10px;
+	vertical-align: middle;
+}
+.rnk1item .alt th, .rnk1item .alt td {
+}
+/* ランキング型2 */
+.rnk2item {
+	font-size: 12px;
+}
+.rnk2item .timg, .rnk2item .tdesc {
+	padding: 15px;
+}
+.rnk2item td {
+	padding: 0px;
+	vertical-align: top;
+}
+.rnk2item .ttitle {
+	border: 1px solid #CCCCCC;
+	padding: 10px;
+	text-align: left;
+	font-size: 16px;
+}
+.rnk2item  .timg {
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #CCCCCC;
+	width:130px;
+}
+.rnk2item .timg img {
+	padding-bottom: 10px;
+}
+.rnk2item .tdesc {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: #CCCCCC;
+	line-height: 160%;
+}
+.rnk2item .ttable {
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	background-color: #CCCCCC;
+}
+.ttable th, .ttable td {
+	padding: 8px;
+	width: 33%;
+	text-align: center;
+}
+/* ▼1/25追加分 */
+/* ランキング型3 */
+.rnk3item {
+	border: 1px solid #CCCCCC;
+}
+.rnk3item  th {
+	text-align: left;
+	padding: 8px;
+	font-size: 17px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFFFFF;
+	border-bottom-color: #CCCCCC;
+}
+.rnk3item th img {
+	vertical-align: bottom;
+	margin-right: 6px;
+}
+.rnk3item td {
+	padding: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+}
+.rnk3item .timg {
+	text-align: center;
+	width: 150px;
+}
+/* 価格比較型1 */
+.prc1item {
+	border: 1px solid #CCCCCC;
+}
+.prc1item th {
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #FFFFFF;
+	border-bottom-color: #CCCCCC;
+	padding: 6px;
+	text-align: center;
+}
+.prc1item td {
+	text-align: center;
+	padding: 6px;
+}
+.prc1item .alt td {
+	background-color: #F5F5F5;
+}
+.prc1item .price {
+	text-align: right;
+	width: 120px;
+}
+/* 項目説明型 */
+.dsc1item,.dsc2item {
+	background-color: #CCCCCC;
+}
+.dsc1item  th, .dsc1item  td,.dsc2item th, .dsc2item td {
+	padding: 6px;
+}
+.dsc1item th , .dsc2item th {
+	text-align: center;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #FFFFFF;
+}
+.dsc1item td , .dsc2item td {
+	font-size: 95%;
+	vertical-align: top;
+}
+.dsc1item th{
+	width: 30%;
+}
+.dsc2item .col2 th{
+	width: 50%;
+}
+.dsc2item .col3 th{
+	width: 33%;
+}
+.dsc2item .col4 th{
+	width: 25%;
+}
+/* メニュー型 */
+.tblmenu1item td {
+	font-size: 12px;
+	line-height: 130%;
+	border: 1px solid #CCCCCC;
+	vertical-align:top;
+}
+.tblmenu1item  td  .ttitle {
+	background-color: #EEEEEE;
+	font-weight: bolder;
+	padding: 7px;
+	margin-bottom: 8px;
+	font-size: 13px;
+}
+.tblmenu1item .col1{
+	width:100%;
+}
+.tblmenu1item .col2{
+	width:50%;
+}
