@@ -220,7 +220,7 @@ p {
 	padding-bottom: 20px;
 	min-height:400px;
 	margin-top:50px;
-	background-image: url(/img/contents_bg_left.jpg);
+	background-image: url(/img/contents_bg_left.jpeg);
 	background-repeat: repeat-y;
 	background-position: left;
 	margin-top:0px;
@@ -470,7 +470,7 @@ h1 {
 }
 #categorylist h4 {
 	clear: none;
-	background-image: url(/img/categorylist.jpg);
+	background-image: url(/img/categorylist.jpeg);
 	background-repeat: no-repeat;
 	font-size: 15px;
 	height: 30px;
@@ -706,7 +706,7 @@ h1 {
 }
 #menu h4 ,#rmenu h4 ,.menutitle {
 	line-height: 30px;
-	background-image: url(/img/menu_h4.jpg);
+	background-image: url(/img/menu_h4.jpeg);
 	height: 30px;
 	font-size:14px;
 	color: #FFFFFF;
