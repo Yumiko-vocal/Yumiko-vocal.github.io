@@ -130,10 +130,11 @@ p {
 	margin-left: auto;
 	background-image: url(/img/cnt_bg.png);
 	background-repeat: repeat-y;
+
 }
 #header {
 	height: 200px;
-	background-image: url(/img/header.jpg?raw=true);
+	background-image: url(/img/header.jpg);
 	overflow:hidden;
 	background-repeat: no-repeat;
 	background-position: left top;
