@@ -135,7 +135,7 @@ p {
 
 }
 #header {
-	height: 200px;
+	height: 250px;
 	background-image: url(/img/header.jpeg);
 	overflow:hidden;
 	background-repeat: no-repeat;
