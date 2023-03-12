@@ -165,7 +165,7 @@ p {
 	position: relative;
 	left: 30px;
 	top: 60px;
-	font-size: 17px;
+	font-size: 20px;
 }
 /* コンテンツ */
 #text1, #text2, #text3, #text4, #text5, #text6, #text7, #text8, #text9, #text10, #space1 ,#space2 {
@@ -185,7 +185,7 @@ p {
 	padding: 0px;
 	background-image: url(/img/topmenu.jpeg);
 	background-position: left top;
-	font-size: 13px;
+	font-size: 16px;
 }
 #topmenu span a {
 	overflow: hidden;
@@ -266,7 +266,7 @@ p {
 	background-color: #FFFFFF;
 	text-align: center;
 	line-height: 120%;
-	font-size: 12px;
+	font-size: 16px;
 	padding: 8px;
 }
 /* レイアウト差分 */
@@ -300,7 +300,7 @@ p {
 	text-align: right;
 	line-height: 30px;
 	height: 30px;
-	font-size:12px;
+	font-size:16px;
 	padding-top: 6px;
 }
 #searchbox input {
@@ -318,7 +318,7 @@ form input {
 /* 各種見出し */
 h1 {
 	font-weight: normal;
-	font-size: 12px;
+	font-size: 16px;
 	color: #666666;
 	line-height: 16px;
 	background-repeat: no-repeat;
@@ -329,8 +329,8 @@ h1 {
 	font-family: sans-serif;
 }
 #main h2,#main h3,.blog .title {
-	font-size: 18px;
-	line-height: 20px;
+	font-size: 20px;
+	line-height: 22px;
 	background-repeat: no-repeat;
 	background-position: left top;
 	margin-bottom: 5px;
@@ -365,7 +365,7 @@ h1 {
 	background-image: url(/img/h5.jpeg);
 	background-position: left 2px;
 	background-repeat: no-repeat;
-	font-size: 15px;
+	font-size: 16px;
 	line-height:26px;
 	text-indent: 25px;
 	margin-top: 10px;
@@ -376,7 +376,7 @@ h1 {
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 20px;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 20px;
 	margin-top: 6px;
 	margin-bottom: 6px;
@@ -465,7 +465,7 @@ h1 {
 }
 #categorylist .cbox{
 	margin-bottom:15px;
-	font-size:13px;
+	font-size:16px;
 }
 #categorylist .cbox:after {
 	clear: both;
@@ -474,7 +474,7 @@ h1 {
 	clear: none;
 	background-image: url(/img/categorylist.jpeg);
 	background-repeat: no-repeat;
-	font-size: 15px;
+	font-size: 16px;
 	height: 30px;
 	padding-left: 25px;
 	padding-bottom: 0px;
@@ -492,7 +492,7 @@ h1 {
 	color: #DE2147;
 }
 #categorylist .desc {
-	font-size: 12px;
+	font-size: 16px;
 	line-height: 130%;
 	color: #505050;
 	padding: 10px;
@@ -529,7 +529,7 @@ h1 {
 }
 #entrylist dt {
 	font-weight: bold;
-	font-size: 14px;
+	font-size: 16px;
 	background-image: url(/img/entlist.jpeg);
 	background-repeat: no-repeat;
 	background-position: left 5px;
@@ -539,7 +539,7 @@ h1 {
 #entrylist dd {
 	margin-left: 15px;
 	margin-bottom: 8px;
-	font-size: 11px;
+	font-size: 16px;
 	color: #757575;
 	line-height: 120%;
 }
@@ -547,14 +547,14 @@ h1 {
 .txt-border {
 	background-image: url(/img/dott.gif);
 	line-height: 22px;
-	font-size: 13px;
+	font-size: 16px;
 	margin: 10px;
 	padding: 0px;
 	background-position: 0px 5px;
 }
 .txt-border p {
 	line-height: 22px;
-	font-size: 13px;
+	font-size: 16px;
 }
 .txt-line  {
 	border: 2px solid #CCCCCC;
@@ -710,7 +710,7 @@ h1 {
 	line-height: 30px;
 	background-image: url(/img/menu_h4.jpeg);
 	height: 30px;
-	font-size:14px;
+	font-size:16px;
 	color: #FFFFFF;
 	text-align: left;
 	padding-left: 20px;
@@ -771,13 +771,13 @@ h1 {
 	padding-left: 0px;
 	background-image: url(/img/menu_line.gif);
 	background-position: left bottom;
-	font-size: 11px;
+	font-size: 16px;
 }
 #menu li.l3 a ,#rmenu li.l3 a {
 	background-position: 40px 10px;
 	padding-left: 55px;
 	background-image: url(/img/menu_l2.gif);
-	font-size: 11px;
+	font-size: 16px;
 }
 #newEntry   li   a,#newEntry  li a:hover {
 	background-image: url(/img/newtext.gif);
@@ -818,13 +818,13 @@ h1 {
 	background-repeat: no-repeat;
 	background-position: left center;
 	margin-top:15px;
-	font-size:14px;
+	font-size:16px;
 	padding-left:16px;
 }
 #searchresult dd{
 	margin:0px;
 	line-height:130%;
-	font-size:13px;
+	font-size:16px;
 }
 #linklist {
 	padding: 15px;
@@ -871,7 +871,7 @@ h1 {
 	text-decoration: underline;
 }
 .blog  .detail {
-	font-size: 15px;
+	font-size: 16px;
 	text-align: left;
 	padding-right: 15px;
 	padding-left: 15px;
@@ -964,7 +964,7 @@ h1 {
 }
 #menu.pcol1 li a ,#rmenu.pcol1 li a{
 	line-height: 16px;
-	font-size: 12px;
+	font-size: 16px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0px;
