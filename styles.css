@@ -30,6 +30,10 @@ h1, h2, h3, h4, .title ,.menutitle{
 h1,h2,h3,h4{
 	clear:both;
 }
+li {
+	color: orange;
+	font-size: 32px;
+}
 /*
 //見出しを通常のフォントにする場合は／* と *／ を削除
 h3, h4 ,h5 ,h6{
