@@ -966,15 +966,15 @@ h1 {
 	background-color: #FFF;
 }
 #menu.pcol1 li a ,#rmenu.pcol1 li a{
-	line-height: 16px;
-	font-size: 12px;
+	line-height: 20px;
+	font-size: 18px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0px;
 	margin-left: 0;
-	padding-top: 5px;
+	padding-top: 8px;
 	padding-right: 5px;
-	padding-bottom: 5px;
+	padding-bottom: 8px;
 	padding-left: 5px;
 	color: #484848;
 	background-image:none;
