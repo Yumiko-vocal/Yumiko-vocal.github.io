@@ -726,9 +726,9 @@ h1 {
 	_padding: 4px;
 }
 #menu li a ,#rmenu li a{
-	line-height: 14px;
+	line-height: 20px;
 	display: block;
-	font-size: 12px;
+	font-size: 18px;
 	text-decoration: none;
 	background-image: url(/img/menu_bg.gif);
 	background-repeat: no-repeat;
@@ -738,9 +738,9 @@ h1 {
 	margin-right: 0;
 	margin-bottom: 0px;
 	margin-left: 0;
-	padding-top: 6px;
+	padding-top: 9px;
 	padding-right: 6px;
-	padding-bottom: 6px;
+	padding-bottom: 9px;
 	padding-left: 20px;
 	_padding-top: 2px;
 	_padding-bottom: 2px;
