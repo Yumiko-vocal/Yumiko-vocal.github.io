@@ -14,7 +14,7 @@ body {
 		background-image: url(/img/118cd96f09e2ceef7200637da516d48d_m-1.jpeg);
 		background-repeat: repeat-x;
 	background-color: #D59C54;
-	font-size: 30px;
+	font-size: 16px;
 }
 div, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
@@ -30,10 +30,7 @@ h1, h2, h3, h4, .title ,.menutitle{
 h1,h2,h3,h4{
 	clear:both;
 }
-li, a {
-	color: orange;
-	font-size: 32px;
-}
+
 /*
 //見出しを通常のフォントにする場合は／* と *／ を削除
 h3, h4 ,h5 ,h6{
@@ -966,15 +963,15 @@ h1 {
 	background-color: #FFF;
 }
 #menu.pcol1 li a ,#rmenu.pcol1 li a{
-	line-height: 20px;
-	font-size: 18px;
+	line-height: 16px;
+	font-size: 12px;
 	margin-top: 0;
 	margin-right: 0;
 	margin-bottom: 0px;
 	margin-left: 0;
-	padding-top: 8px;
+	padding-top: 5px;
 	padding-right: 5px;
-	padding-bottom: 8px;
+	padding-bottom: 5px;
 	padding-left: 5px;
 	color: #484848;
 	background-image:none;
