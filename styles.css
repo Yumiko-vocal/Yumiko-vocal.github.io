@@ -14,14 +14,14 @@ body {
 		background-image: url(/img/118cd96f09e2ceef7200637da516d48d_m-1.jpeg);
 		background-repeat: repeat-x;
 	background-color: #D59C54;
-	font-size: 16px;
+	font-size: 30px;
 }
 div, p, h1, h2, h3, h4, h5, h6 {
 	margin: 0px;
 	padding: 0px;
 	display: block;
 	text-align: left;
-	font-size: 30px;
+	font-size: 16px;
 }
 h1, h2, h3, h4, .title ,.menutitle{
 	font-family: 'HGP創英角ｺﾞｼｯｸUB', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W6', sans-serif;
