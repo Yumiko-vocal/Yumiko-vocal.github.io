@@ -222,9 +222,9 @@ p {
 	padding-bottom: 20px;
 	min-height:400px;
 	margin-top:50px;
-	background-image: url(/img/contents_bg_left.jpeg);
+	/*background-image: url(/img/contents_bg_left.jpeg);
 	background-repeat: repeat-y;
-	background-position: left;
+	background-position: left;*/
 	margin-top:0px;
 }
 #menu:after,#contents:after{
