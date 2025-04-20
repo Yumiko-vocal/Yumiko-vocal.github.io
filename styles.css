@@ -1000,3 +1000,9 @@ h1 {
   border-radius: 8px;
 }
 
+.highlight-background {
+  background-color: #f0f0f0; /* 薄いグレー */
+  padding: 10px; /* 内部余白 */
+  border-radius: 5px; /* 角を丸く */
+}
+
