@@ -11,17 +11,34 @@
 <link rel="alternate" type="application/rss+xml" title="RSS" href="https://yumiko-vocal.github.io/rss.xml" />
 </head>
 
+
+
 <body>
 <div id="container">
 
-<h1>赤瀬ゆみこ　ボーカル　ジャズ　音楽教室</h1>
-<!-- HTMLファイル内に以下を追加 -->
-<div id="header"></div>
+
+
+<!-- ヘッダー -->
+<div id="header-include"></div>
+<!-- 左メニュー -->
+<div id="menu-include"></div>
+<!-- フッター -->
+<div id="footer-include"></div>
+
+<!-- 読み込みスクリプト -->
 <script>
-  fetch('../category0/header.html')
-    .then(response => response.text())
-    .then(data => document.getElementById('header').innerHTML = data);
+  function includeHTML(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+  }
+  includeHTML("header-include", "../category0/header.html");
+  includeHTML("menu-include", "../category0/menu.html");
+  includeHTML("footer-include", "../category0/footer.html");
 </script>
+
 
 <div id="contents">
 <div id="main">
@@ -29,9 +46,11 @@
 
 <div id="text1">
 
+
 <p><img src="/img/ピアノ個人レッスン-1.jpeg" alt="" />&nbsp;</p>
 <p>&nbsp;</p>
-<p>大好きな曲をピアノで弾けたら。。生活の中でいつも生の音楽が流れたら。。きっと心も豊かになりますね。ピアノは楽器の王様。難しいけれど頑張っただけ必ず上達します♪じっくりとペースに合わせて指導します。</p>
+<p>大好きな曲をピアノで弾けたら。。生活の中でいつも生の音楽が流れたら。。きっと心も豊かになりますね。
+  ピアノは楽器の王様。難しいけれど頑張っただけ必ず上達します♪じっくりとペースに合わせて指導します。</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>月謝　6000円～（１回３０分～×年間４２回）<br />その他　年１回の発表会、クリスマス会を開催しています。</p>
@@ -40,42 +59,14 @@
 <p>&nbsp;</p>
 <p>　　　<span style="font-size:18px"><strong>☆無料体験レッスン随時受付中</strong></span></p>
 <p>&nbsp;</p>
-<p>お問い合わせ<br />ムジカ♪ドルチェ戸塚教室<br />　（東汲沢小学校近く）<br />メール　<a href="mailto:sing_sing_yumitch@yahoo.co.jp">sing_sing_yumitch@yahoo.co.jp</a><br /><img src="/img/ピアノ黒-1.jpeg" alt="" />&nbsp;</p>
+<p>お問い合わせ<br />ムジカ♪ドルチェ戸塚教室<br />　（東汲沢小学校近く）<br />
+  メール　<a href="mailto:sing_sing_yumitch@yahoo.co.jp">sing_sing_yumitch@yahoo.co.jp</a><br />
+  <img src="/img/ピアノ黒-1.jpeg" alt="" />&nbsp;</p>
+
 
 </div></div>
 
-<div id="menu">
-<h4>プロフィール</h4>
-<div class="menubox"><ul id="menu1">
-<li><a href="../category10/">プロフィール</a></li>
-</ul></div>
-<h4>スケジュール</h4>
-<div class="menubox"><ul id="menu2">
-<li><a href="../category3/">ジャズライブ</a></li>
-<li><a href="../category4/">コンサート／イベント</a></li>
-<li><a href="../category24/">チラシ</a></li>
-</ul></div>
-<h4>ビデオ／写真</h4>
-<div class="menubox"><ul id="menu3">
-<li><a href="../category5/">ビデオ</a></li>
-<li><a href="../category6/">写真</a></li>
-</ul></div>
-<h4>レッスン</h4>
-<div class="menubox"><ul id="menu4">
-<li><a href="../category7/">歌</a></li>
-<li><a href="../category8/">ピアノ</a></li>
-<li><a href="../category9/">リトミック</a></li>
-<li><a href="../category12/">チラシ</a></li>
-</ul></div>
-
-</div>
-
 <br class="FloatEnd" />
-</div>
-<div id="footlink"><a href="../sitemap.html">サイトマップ</a></div>
-
-<div id="footer">Copyright (C) 2022 <a href="../">赤瀬ゆみこのWEBサイトへようこそ♪</a> All Rights Reserved.</div>
-
-</div>
+</div></div>
 </body>
 </html>
