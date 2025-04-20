@@ -109,6 +109,7 @@
 
 
 <p class="highlight-background">
+  <img src="/category3/img/poster_202308.jpg" alt="poster" class="zoomable" style="float:right;width:152px;height:auto" align="right">
   <span style="font-size:18px"><strong>8月18日（金）19：30～</strong></span><br />
   <span style="font-size:18px"><strong>9月15日（金）19：30～</strong></span><br />
   <span style="font-size:18px"><strong>10月21日（土）19：00～</strong></span><br />
@@ -137,10 +138,24 @@
 
 
 
+
 <!-- 左メニュー -->
 <div id="menu-include"></div>
 
 <br class="FloatEnd" />
+
+
+
+
+<!-- モーダル（画像が拡大表示される場所） -->
+<div id="img-modal">
+  <!-- 閉じるためのバツボタン（×） -->
+  <span id="close-modal">&times;</span>
+
+  <!-- 拡大表示される画像。クリックされた画像の内容がここに入る -->
+  <img id="modal-img" src="">
+</div>
+
 
 
 
@@ -152,6 +167,8 @@
 </div></div>
 
 
+
+
 <!-- 読み込みスクリプト -->
 <script>
   function includeHTML(id, file) {
@@ -161,11 +178,13 @@
         document.getElementById(id).innerHTML = data;
       });
   }
-  includeHTML("header-include", "/category0/header.html");
-  includeHTML("menu-include", "/category0/menu.html");
-  includeHTML("footer-include", "/category0/footer.html");
-</script>
 
+  includeHTML("header-include", "/category0/header.html"); //ヘッダー読み込み
+  includeHTML("menu-include", "/category0/menu.html"); //メニュー読み込み
+  includeHTML("footer-include", "/category0/footer.html"); //フッター読み込み
+
+</script>
+<script src="/js/modal.js">//ポップアップやアニメーションの挙動</script>
 
 </body>
 </html>
