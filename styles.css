@@ -998,3 +998,7 @@ h1 {
   display: block;
   border-radius: 8px;
 }
+
+.menubox_small {
+	font-size: 12px;
+}
