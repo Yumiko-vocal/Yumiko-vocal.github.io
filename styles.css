@@ -990,7 +990,6 @@ h1 {
   display: flex;            /* 横並び */
   gap: 10px;                /* アイコン間の余白 */
   align-items: center;      /* 縦方向中央揃え */
-  margin-top: 10px;         /* 上に少しスペース（任意） */
 }
 
 .sns-icon {
