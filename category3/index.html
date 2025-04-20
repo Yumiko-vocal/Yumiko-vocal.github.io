@@ -127,36 +127,47 @@
   const url = `https://spreadsheets.google.com/feeds/list/${sheetId}/od6/public/values?alt=json`;
 
 
-  fetch(url)
-    .then(response => response.json())
-    .then(data => {
-      const entries = data.feed.entry;
-      const container = document.getElementById('schedule');
+  // CSVを読み込み
+  fetch(csvUrl)
+    .then(response => response.text())  // CSVとして読み込み
+    .then(csvData => {
+      // PapaParseでCSVをパース
+      Papa.parse(csvData, {
+        header: true,  // ヘッダー行を自動的にキーとして扱う
+        dynamicTyping: true,  // 自動的に型変換
+        complete: function(results) {
+          const entries = results.data;  // パースしたデータ
+          const container = document.getElementById('schedule');  // 表示する場所
 
-      entries.forEach(entry => {
-        const year = entry.gsx$年.$t;
-        const month = entry.gsx$月.$t;
-        const day = entry.gsx$日.$t;
-        const time = entry.gsx$開始時間.$t;
-        const place = entry.gsx$場所.$t;
-        const link = entry.gsx$リンク.$t;
-        const charge = entry.gsx$Mチャージ.$t;
-        const members = entry.gsx$出演者.$t;
+          // 各エントリをHTMLとして追加
+          entries.forEach(entry => {
+            const year = entry['年'];
+            const month = entry['月'];
+            const day = entry['日'];
+            const time = entry['開始時間'];
+            const place = entry['場所'];
+            const link = entry['リンク'];
+            const charge = entry['M.チャージ'];
+            const members = entry['出演者'];
 
-        const html = `
-          <p class="highlight-background">
-            <span style="font-size:18px"><strong>${month}月${day}日（金）${time}～</strong></span><br />
-            ${place}　　<a href="${link}" target="_blank"><strong>詳細はこちら</strong></a><br />
-            ${members}<br />
-            M.チャージ  ¥${charge}<br />
-          </p>
-          <p>&nbsp;</p>
-          <p>&nbsp;</p>
-        `;
+            const html = `
+              <p class="highlight-background">
+                <span style="font-size:18px"><strong>${month}月${day}日（金）${time}～</strong></span><br />
+                ${place}　　<a href="${link}" target="_blank"><strong>詳細はこちら</strong></a><br />
+                ${members}<br />
+                M.チャージ  ¥${charge}<br />
+              </p>
+              <p>&nbsp;</p>
+              <p>&nbsp;</p>
+            `;
 
-        container.insertAdjacentHTML('beforeend', html);
+            // 生成したHTMLを指定した場所に追加
+            container.insertAdjacentHTML('beforeend', html);
+          });
+        }
       });
-    });
+    })
+    .catch(error => console.error('Error:', error));  // エラーハンドリング
 </script>
 
 
