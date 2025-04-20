@@ -996,4 +996,5 @@ h1 {
   width: 50px;  /* 必要に応じて調整してね */
   height: 50px;
   display: block;
+  border-radius: 8px;
 }
