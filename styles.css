@@ -988,8 +988,9 @@ h1 {
 
 .sns-links {
   display: flex;            /* 横並び */
-  gap: 13px;                /* アイコン間の余白 */
+  gap: 12px;                /* アイコン間の余白 */
   align-items: center;      /* 縦方向中央揃え */
+  justify-content: center;   /* 横方向中央揃え */
   margin-bottom: 4px;
 }
 
