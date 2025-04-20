@@ -42,7 +42,7 @@
 
 
 <p class="highlight-background">
-  <img src="/category3/img/poster_202411.jpg" alt="" style="float:right;width:152px;height:auto" align="right">
+  <img src="/category3/img/poster_202411.jpg" alt="poster" class="zoomable" style="float:right;width:152px;height:auto" align="right">
   <span style="font-size:18px"><strong>1月18日（土）19：00～</strong></span><br />
   <span style="font-size:18px"><strong>2月21日（金）19：30～</strong></span><br />
   関内「よいどれ伯爵」　　045-261-0272<br />
@@ -206,7 +206,19 @@
 </div></div>
 
 
+
+<!-- ポップアップ拡大html -->
+<div id="img-modal" style="display:none;position:fixed;z-index:1000;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.8);justify-content:center;align-items:center;">
+  <span id="close-modal" style="position:absolute;top:20px;right:30px;color:white;font-size:40px;cursor:pointer;">&times;</span>
+  <img id="modal-img" src="" style="max-width:90%;max-height:90%;">
+</div>
+
+
+
+
+
 <!-- 読み込みスクリプト -->
+<!-- 拡大スクリプト -->
 <script>
   function includeHTML(id, file) {
     fetch(file)
@@ -218,6 +230,29 @@
   includeHTML("header-include", "/category0/header.html");
   includeHTML("menu-include", "/category0/menu.html");
   includeHTML("footer-include", "/category0/footer.html");
+
+
+
+  document.querySelectorAll('.zoomable').forEach(img => {
+    img.addEventListener('click', function () {
+      const modal = document.getElementById('img-modal');
+      const modalImg = document.getElementById('modal-img');
+      modalImg.src = this.src;
+      modal.style.display = 'flex';
+    });
+  });
+
+  document.getElementById('close-modal').addEventListener('click', function () {
+    document.getElementById('img-modal').style.display = 'none';
+  });
+
+  // 背景クリックでも閉じる
+  document.getElementById('img-modal').addEventListener('click', function (e) {
+    if (e.target.id === 'img-modal') {
+      this.style.display = 'none';
+    }
+  });
+
 </script>
 
 
