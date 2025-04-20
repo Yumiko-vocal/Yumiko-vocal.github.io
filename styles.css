@@ -988,16 +988,16 @@ h1 {
 
 .sns-links {
   display: flex;            /* 横並び */
-  gap: 10px;                /* アイコン間の余白 */
+  gap: 13px;                /* アイコン間の余白 */
   align-items: center;      /* 縦方向中央揃え */
   margin-bottom: 4px;
 }
 
 .sns-icon {
-  width: 50px;  /* 必要に応じて調整してね */
+  width: 50px;  /* 必要に応じて調整 */
   height: 50px;
   display: block;
-  border-radius: 8px;
+  border-radius: 8px; /* 角を丸く */
 }
 
 .highlight-background {
