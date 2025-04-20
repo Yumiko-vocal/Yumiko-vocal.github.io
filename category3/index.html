@@ -126,54 +126,7 @@
 
 
 
-
-
-<!-- 自動で予定を読み込んでくれる仕組み -->
-
-<!-- <h2 style="text-align:center;">スプレッドシートの内容</h2>
-<table id="spreadsheet-table"></table>
-
-<script>
-  // スプレッドシートリンク
-  // https://docs.google.com/spreadsheets/d/1tq8_E9vKwo13pYOELAnFkN4LKt6mHzc3gGe8gveq_kk/edit?usp=sharing
-  const CSV_URL = 'https://docs.google.com/spreadsheets/d/1tq8_E9vKwo13pYOELAnFkN4LKt6mHzc3gGe8gveq_kk/export?format=csv';
-
-  fetch(CSV_URL)
-    .then(response => response.text())
-    .then(csv => {
-      const rows = csv.trim().split('\n').map(row => row.split(','));
-      const table = document.getElementById('spreadsheet-table');
-
-      rows.forEach((cols, i) => {
-        const tr = document.createElement('tr');
-        cols.forEach(col => {
-          const cell = document.createElement(i === 0 ? 'th' : 'td');
-          cell.textContent = col;
-          tr.appendChild(cell);
-        });
-        table.appendChild(tr);
-      });
-    })
-    .catch(err => {
-      console.error('CSV読み込みエラー:', err);
-    });
-</script> -->
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
+<!-- 自動で読み込んでくれる仕組み -->
 <div id="schedule"></div>
 
 <script>
@@ -221,6 +174,18 @@
     })
     .catch(error => console.error('Error:', error));  // エラーハンドリング
 </script>
+
+
+
+
+
+</div>
+
+
+
+
+
+
 
 
 
