@@ -18,7 +18,7 @@
 <!-- HTMLファイル内に以下を追加 -->
 <div id="header"></div>
 <script>
-  fetch('/header.html')
+  fetch('../category0/header.html')
     .then(response => response.text())
     .then(data => document.getElementById('header').innerHTML = data);
 </script>
