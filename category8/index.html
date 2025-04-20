@@ -25,19 +25,6 @@
 <!-- フッター -->
 <div id="footer-include"></div>
 
-<!-- 読み込みスクリプト -->
-<script>
-  function includeHTML(id, file) {
-    fetch(file)
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById(id).innerHTML = data;
-      });
-  }
-  includeHTML("header-include", "../category0/header.html");
-  includeHTML("menu-include", "../category0/menu.html");
-  includeHTML("footer-include", "../category0/footer.html");
-</script>
 
 
 <div id="contents">
@@ -68,5 +55,22 @@
 
 <br class="FloatEnd" />
 </div></div>
+
+
+<!-- 読み込みスクリプト -->
+<script>
+  function includeHTML(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+  }
+  includeHTML("header-include", "../category0/header.html");
+  includeHTML("menu-include", "../category0/menu.html");
+  includeHTML("footer-include", "../category0/footer.html");
+</script>
+
+
 </body>
 </html>
