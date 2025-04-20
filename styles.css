@@ -990,6 +990,7 @@ h1 {
   display: flex;            /* 横並び */
   gap: 10px;                /* アイコン間の余白 */
   align-items: center;      /* 縦方向中央揃え */
+  margin-bottom: 2px;
 }
 
 .sns-icon {
@@ -999,6 +1000,3 @@ h1 {
   border-radius: 8px;
 }
 
-.menubox_small {
-	font-size: 12px;
-}
