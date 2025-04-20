@@ -224,14 +224,10 @@
   includeHTML("header-include", "/category0/header.html"); //ヘッダー読み込み
   includeHTML("menu-include", "/category0/menu.html"); //メニュー読み込み
   includeHTML("footer-include", "/category0/footer.html"); //フッター読み込み
-  // モーダルHTML読み込み → 読み終えたら JS を動的に読み込む
-  includeHTML("modal-include", "/category0/modal.html", () => {
-    const script = document.createElement("script");
-    script.src = "/js/modal.js";
-    document.body.appendChild(script);
-  });
+  includeHTML("modal-include", "/category0/modal.html"); // モーダルHTML読み込み
 </script>
 
+<script src="/js/modal.js"></script>
 
 </body>
 </html>
