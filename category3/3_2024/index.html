@@ -131,6 +131,7 @@
 
 
 <p class="highlight-background">
+  <img src="/category3/img/poster_202407.jpg" alt="poster" class="zoomable" style="float:right;width:120px;height:auto" align="right">
   <span style="font-size:18px"><strong>7月6日（土）19：00～</strong></span><br />
   <span style="font-size:18px"><strong>8月30日（金）19：30～</strong></span><br />
   <span style="font-size:18px"><strong>9月21日（土）19：00～</strong></span><br />
@@ -145,6 +146,7 @@
 
 
 <p class="highlight-background">
+  <img src="/category3/img/poster_202408.jpg" alt="poster" class="zoomable" style="float:right;width:120px;height:auto" align="right">
   <span style="font-size:18px"><strong>8月12日（月）18：00～</strong></span><br />
   浅草「HUB 浅草店」　　03-3843-1254<br />
   （P）岩谷泰行　（B）根市タカオ　（D）遠藤真治　（Vib）藤井寛<br />
@@ -156,6 +158,7 @@
 
 
 <p class="highlight-background">
+  <img src="/category3/img/poster_202410.jpg" alt="poster" class="zoomable" style="float:right;width:120px;height:auto" align="right">
   <span style="font-size:18px"><strong>10月18日（月）19：20～</strong></span><br />
   上野「Aries」　　03-3831-0523<br />
   「Aries」詳細は<a href="https://ueno-aries.jimdofree.com/"><strong>こちら</strong></a><br />
@@ -168,6 +171,7 @@
 
 
 <p class="highlight-background">
+  <img src="/category3/img/poster_202411.jpg" alt="poster" class="zoomable" style="float:right;width:120px;height:auto" align="right">
   <span style="font-size:18px"><strong>11月30日（土）19：00～</strong></span><br />
   <span style="font-size:18px"><strong>12月20日（金）19：30～</strong></span><br />
   関内「よいどれ伯爵」　　045-261-0272<br />
@@ -185,10 +189,24 @@
 
 
 
+
 <!-- 左メニュー -->
 <div id="menu-include"></div>
 
 <br class="FloatEnd" />
+
+
+
+
+<!-- モーダル（画像が拡大表示される場所） -->
+<div id="img-modal">
+  <!-- 閉じるためのバツボタン（×） -->
+  <span id="close-modal">&times;</span>
+
+  <!-- 拡大表示される画像。クリックされた画像の内容がここに入る -->
+  <img id="modal-img" src="">
+</div>
+
 
 
 
@@ -200,6 +218,8 @@
 </div></div>
 
 
+
+
 <!-- 読み込みスクリプト -->
 <script>
   function includeHTML(id, file) {
@@ -209,11 +229,13 @@
         document.getElementById(id).innerHTML = data;
       });
   }
-  includeHTML("header-include", "/category0/header.html");
-  includeHTML("menu-include", "/category0/menu.html");
-  includeHTML("footer-include", "/category0/footer.html");
-</script>
 
+  includeHTML("header-include", "/category0/header.html"); //ヘッダー読み込み
+  includeHTML("menu-include", "/category0/menu.html"); //メニュー読み込み
+  includeHTML("footer-include", "/category0/footer.html"); //フッター読み込み
+
+</script>
+<script src="/js/modal.js">//ポップアップやアニメーションの挙動</script>
 
 </body>
 </html>
