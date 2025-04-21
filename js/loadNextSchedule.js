@@ -28,7 +28,7 @@ fetch(csvUrl)
       headers.forEach((h, j) => data[h] = values[j]);
       const date = new Date(+data['年'], +data['月'] - 1, +data['日']);
       if (!isNaN(date) && date >= today) {
-        events.push({ data, date });
+        events.push({ data, date }); // 修正: "eventDate" -> "date"
       }
     }
 
@@ -38,10 +38,10 @@ fetch(csvUrl)
     }
 
     // 日付で昇順ソート
-    events.sort((a, b) => a.eventDate - b.eventDate);
+    events.sort((a, b) => a.date - b.date); // 修正: "eventDate" -> "date"
 
     // 最も近い1件のみ
-    const { data, eventDate } = events[0];
+    const { data, date: eventDate } = events[0]; // 修正: "eventDate" のリネーム
     const weekday = getWeekday(eventDate.getFullYear(), eventDate.getMonth() + 1, eventDate.getDate());
     const mCharge = Number(data['Mチャージ（自動入力）'])?.toLocaleString?.() ?? '';
 
