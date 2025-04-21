@@ -60,7 +60,8 @@ fetch(csvUrl)
         <p class="highlight-background">
           ${posterImg}
           <span style="font-size:18px"><strong>${eventDate.getFullYear()}年${eventDate.getMonth() + 1}月${eventDate.getDate()}日（${weekday}）${data['開始時間']}～</strong></span><br />
-          ${data['場所']}　　<a href="${data['リンク（自動入力）']}" target="_blank"><strong>詳細はこちら</strong></a><br />
+          ${data['場所']}　　${data['電話番号（自動入力）']}<br />
+          <a href="${data['リンク（自動入力）']}" target="_blank"><strong>詳細はこちら</strong></a><br />
           ${data['出演者']}<br />
           M.チャージ  ¥${mCharge}<br />
           <br />
