@@ -159,7 +159,9 @@
         const year = data['年'];
         const month = data['月'];
         const day = data['日'];
-        const weekday = getWeekday($year, $month, $day);
+        const weekday = getWeekday(year, month, day);
+
+        const mCharge = data['Mチャージ']?.toLocaleString?.() ?? '';
 
         // 必要なデータをHTMLとして追加
         const html = `
@@ -168,7 +170,7 @@
             <span style="font-size:18px"><strong>${month}月${day}日（${weekday}）${data['開始時間']}～</strong></span><br />
             ${data['場所']}　　<a href="${data['リンク']}" target="_blank"><strong>詳細はこちら</strong></a><br />
             ${data['出演者']}<br />
-            M.チャージ  ¥${data['Mチャージ'].toLocaleString()}<br />
+            M.チャージ  ¥${mCharge}<br />
             ${data['コメント']}<br />
           </p>
           <p>&nbsp;</p>
