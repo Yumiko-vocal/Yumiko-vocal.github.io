@@ -1,33 +1,34 @@
 const csvUrl = 'https://docs.google.com/spreadsheets/d/1tq8_E9vKwo13pYOELAnFkN4LKt6mHzc3gGe8gveq_kk/export?format=csv';
 
 fetch(csvUrl)
-  .then(response => response.text())
-  .then(csvData => {
-    const rows = csvData.trim().split('\n');
-    const container = document.getElementById('next_schedule');
-    const headers = rows[0].split(',');
+  .then(res => res.text())
+  .then(csvText => {
+    const rawLines = csvText.split('\n');
+    const rows = [];
+    let line = '', quotes = 0;
 
+    for (const l of rawLines) {
+      line += (line ? '\n' : '') + l;
+      quotes += (l.match(/"/g) || []).length;
+      if (quotes % 2 === 0) {
+        rows.push(line);
+        line = ''; quotes = 0;
+      }
+    }
+
+    const headers = parseCSVRow(rows[0]);
     const today = new Date();
     const events = [];
 
     for (let i = 1; i < rows.length; i++) {
-      const row = rows[i].split(',');
-      if (row.length !== headers.length) continue;
+      const values = parseCSVRow(rows[i]);
+      if (values.length !== headers.length) continue;
 
       const data = {};
-      for (let j = 0; j < headers.length; j++) {
-        data[headers[j]] = row[j];
-      }
-
-      const year = parseInt(data['年']);
-      const month = parseInt(data['月']);
-      const day = parseInt(data['日']);
-
-      const eventDate = new Date(year, month - 1, day);
-      if (isNaN(eventDate)) continue;
-
-      if (eventDate >= today) {
-        events.push({ data, eventDate });
+      headers.forEach((h, j) => data[h] = values[j]);
+      const date = new Date(+data['年'], +data['月'] - 1, +data['日']);
+      if (!isNaN(date) && date >= today) {
+        events.push({ data, date });
       }
     }
 
@@ -74,4 +75,19 @@ function getWeekday(year, month, day) {
   const date = new Date(year, month - 1, day);
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
   return weekdays[date.getDay()];
+}
+
+// CSVの1行をパース（カンマ・改行・ダブルクォート対応）
+function parseCSVRow(row) {
+  const result = [];
+  let value = '', inQuotes = false;
+  for (let i = 0; i < row.length; i++) {
+    const char = row[i], next = row[i + 1];
+    if (char === '"' && inQuotes && next === '"') { value += '"'; i++; }
+    else if (char === '"') inQuotes = !inQuotes;
+    else if (char === ',' && !inQuotes) { result.push(value); value = ''; }
+    else value += char;
+  }
+  result.push(value);
+  return result;
 }
