@@ -3,7 +3,8 @@ const csvUrl = 'https://docs.google.com/spreadsheets/d/1tq8_E9vKwo13pYOELAnFkN4L
 fetch(csvUrl)
   .then(response => response.text())
   .then(csvData => {
-    const rows = csvData.trim().split('\n');
+    // "\n"を無視して\nで行を取得する
+    const rows = processCSV(csvData)
     const container = document.getElementById('next_schedule');
     const headers = rows[0].split(',');
 
@@ -74,4 +75,29 @@ function getWeekday(year, month, day) {
   const date = new Date(year, month - 1, day);
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
   return weekdays[date.getDay()];
+}
+
+// ダブルクオテーションで囲われた\nを回避してrowを撮る関数
+function processCSV(csvData) {
+  let processedData = '';
+  let inQuotes = false;
+
+  // 一文字ずつ処理
+  for (let i = 0; i < csvData.length; i++) {
+    const char = csvData[i];
+    // ダブルクォーテーションで囲まれている場合
+    if (char === '"' && (i === 0 || csvData[i - 1] !== '"')) {
+      inQuotes = !inQuotes;
+    }
+    // 引用符の中に改行があれば XIGYO に置き換え
+    if (char === '\n' && inQuotes) { processedData += ' XIgYO0 ';
+    } else { processedData += char;
+    }
+  }
+  
+  // 改行で分割
+  const rows = processedData.split('\n');
+  // 最後に XIGYO を改行に戻す
+  const result = rows.map(row => row.replace(/ XIgYO0 /g, '\n'));
+  return result;
 }
