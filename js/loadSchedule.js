@@ -37,7 +37,8 @@ fetch(csvUrl)
         : '';
 
       // コメント部分の改行を <br /> タグに変換
-      const formattedComment = data['コメント']?.replace(/\n/g, '<br />') ?? '';
+      //const formattedComment = data['コメント']?.replace(/\n/g, '<br />') ?? '';
+      const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
       
       // 必要なデータをHTMLとして追加
       const html = `
