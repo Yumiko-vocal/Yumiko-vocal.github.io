@@ -76,7 +76,7 @@
         const weekday = getWeekday(year, month, day);
 
         // チャージの3桁カンマ
-        const mCharge = data['Mチャージ']?.toLocaleString?.() ?? '';
+        const mCharge = Number(data['Mチャージ'])?.toLocaleString?.() ?? '';
 
         // ポスターがあれば掲載する
         const posterImg = data['ポスター']
