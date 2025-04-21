@@ -32,16 +32,24 @@
 
 <div id="text1">
 
+
+<!-- かっこいい画像1 -->
 <p><img src="/top_page/web_logo.jpg" alt="" style="width: 100%; height: auto;">&nbsp;<br>　　&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
-<p><img src="/top_page/トップページ画像サイドブルー.jpg" alt="" style="width: 100%; height: auto;">&nbsp;</p>
 
+
+<!-- スケジュールを自動で読み込んでくれる仕組み -->
+<div id="next_schedule"></div>
+
+
+<!-- 写真1 -->
+<p><img src="/top_page/トップページ画像サイドブルー.jpg" alt="" style="width: 100%; height: auto;">&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
 
 <!-- 以下の余白がないとスマホでレイアウトが崩れる -->
-<p>&nbsp;</p>
-<p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
@@ -83,7 +91,8 @@
   includeHTML("menu-include", "/category0/menu.html");
   includeHTML("footer-include", "/category0/footer.html");
 </script>
-
+<script src="/js/modal.js">//ポップアップやアニメーションの挙動</script>
+<script src="/js/loadNextSchedule.js">//スプレッドシートからスケジュールの読み込みと表示</script>
 
 </body>
 </html>
