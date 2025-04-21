@@ -35,10 +35,6 @@ fetch(csvUrl)
       const posterImg = data['ポスターのリンク']
         ? `<img src="${data['ポスターのリンク']}" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">`
         : '';
-
-      // コメント部分の改行を <br /> タグに変換
-      //const formattedComment = data['コメント']?.replace(/\n/g, '<br />') ?? '';
-      const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
       
       // 必要なデータをHTMLとして追加
       const html = `
@@ -48,7 +44,7 @@ fetch(csvUrl)
           ${data['場所']}　　<a href="${data['リンク（自動入力）']}" target="_blank"><strong>詳細はこちら</strong></a><br />
           ${data['出演者']}<br />
           M.チャージ  ¥${mCharge}<br />
-          ${formattedComment}
+          ${data['コメント']}<br />
         </p>
         <p>&nbsp;</p>
         <p>&nbsp;</p>
