@@ -48,7 +48,9 @@ fetch(csvUrl)
     // ポスターがあれば掲載する
     const posterImg = data['ポスターのリンク']
       ? `<img src="${data['ポスターのリンク']}" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">`
-      : '';
+      //: '';
+      // なければダミー画像を表示
+      : '<img src="/img/poster-dummy-img.jpg" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">';
 
     // コメント欄をフォーマットする
     const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
