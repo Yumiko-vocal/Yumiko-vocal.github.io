@@ -97,7 +97,7 @@ function processCSV(csvData) {
   
   // 改行で分割
   const rows = processedData.split('\n');
-  // 最後に XIGYO を改行に戻す
-  const result = rows.map(row => row.replace(/ XIgYO0 /g, '\n'));
+  // 最後に XIGYO を改行に戻し"を削除する
+  const result = rows.map(row => row.replace(/ XIgYO0 /g, '\n').replace('"',''));
   return result;
 }
