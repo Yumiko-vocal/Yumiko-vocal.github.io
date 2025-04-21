@@ -5,59 +5,89 @@
 <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
 <meta http-equiv="Content-Style-Type" content="text/css" />
 <title>２０２０年</title>
-<meta name="keywords" content="赤瀬ゆみこ　コンサート／イベントスケジュール" />
-<meta name="description" content="ジャズシンガーとして東京、横浜を中心にライブ出演しています♪<br>歌・ピアノ・リトミックの講師としても活動しています♪" />
-<link rel="stylesheet" href="../../styles.css" type="text/css" />
+<meta name="keywords" content="赤瀬ゆみこ　チラシ" />
+<meta name="description" content="ジャズシンガーとして、東京、横浜を中心にライブ出演しています♪<br>歌・ピアノ・リトミックの講師としても活動しています♪" />
+<link rel="stylesheet" href="https://yumiko-vocal.github.io/styles.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="RSS" href="https://yumiko-vocal.github.io/rss.xml" />
 </head>
 
-<body>
+
+
+<!-- body開始 -->
+<meta name="viewport" content="width=device-width">
+<body class="vsc-initialized">
 <div id="container">
 
-<h1>赤瀬ゆみこ　ボーカル　ジャズ　音楽教室</h1>
-<div id="header">
-<h2><a href="https://yumiko-vocal.github.io/">赤瀬ゆみこの<br>　　　　　Websiteへようこそ♪</a></h2>
-<div id="headertext">ジャズシンガーとして、<br>東京、横浜を中心にライブ出演しています♪
-<br>歌・ピアノ・リトミックの講師としても活動しています♪</div>
-</div>
+
+
+<!-- ヘッダー -->
+<div id="header-include"></div>
+
+
+
+<!-- メインコンテンツ -->
 <div id="contents">
 <div id="main">
 <div id="siteNavi"><a href="../../">トップページ</a> ＞ <a href="../../category24/">チラシ</a> ＞ ２０２０年</div>
 
-</div>
 
-<div id="menu">
-<h4>プロフィール</h4>
-<div class="menubox"><ul id="menu1">
-<li><a href="../../category10/">プロフィール</a></li>
-</ul></div>
-<h4>スケジュール</h4>
-<div class="menubox"><ul id="menu2">
-<li><a href="../../category3/">ジャズライブ</a></li>
-<li><a href="../../category4/">コンサート／イベント</a></li>
-<li><a href="../../category24/">チラシ</a></li>
-</ul></div>
-<h4>ビデオ／写真</h4>
-<div class="menubox"><ul id="menu3">
-<li><a href="../../category5/">ビデオ</a></li>
-<li><a href="../../category6/">写真</a></li>
-</ul></div>
-<h4>レッスン</h4>
-<div class="menubox"><ul id="menu4">
-<li><a href="../../category7/">歌</a></li>
-<li><a href="../../category8/">ピアノ</a></li>
-<li><a href="../../category9/">リトミック</a></li>
-<li><a href="../../category12/">チラシ</a></li>
-</ul></div>
 
-</div>
+
+
+
+
+
+</div></div>
+
+
+
+
+<!-- 左メニュー -->
+<div id="menu-include"></div>
 
 <br class="FloatEnd" />
-</div>
-<div id="footlink"><a href="../../sitemap.html">サイトマップ</a></div>
 
-<div id="footer">Copyright (C) 2022 <a href="../../">赤瀬ゆみこのWEBサイトへようこそ♪</a> All Rights Reserved.</div>
 
+
+
+<!-- モーダル（画像が拡大表示される場所） -->
+<div id="img-modal">
+  <!-- 閉じるためのバツボタン（×） -->
+  <span id="close-modal">&times;</span>
+  <!-- 拡大表示される画像。クリックされた画像の内容がここに入る -->
+  <img id="modal-img" src="">
 </div>
+
+
+
+
+<!-- フッター -->
+<div id="footer-include"></div>
+
+
+
+</div></div>
+
+
+
+
+<!-- 読み込みスクリプト -->
+<script>
+  function includeHTML(id, file) {
+    fetch(file)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById(id).innerHTML = data;
+      });
+  }
+
+  includeHTML("header-include", "/category0/header.html"); //ヘッダー読み込み
+  includeHTML("menu-include", "/category0/menu.html"); //メニュー読み込み
+  includeHTML("footer-include", "/category0/footer.html"); //フッター読み込み
+
+</script>
+<script src="/js/modal.js">//ポップアップやアニメーションの挙動</script>
+<script src="/js/loadSchedule.js">//スプレッドシートからスケジュールの読み込みと表示</script>
+
 </body>
 </html>
