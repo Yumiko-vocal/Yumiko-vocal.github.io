@@ -46,7 +46,8 @@ fetch(csvUrl)
           <span style="font-size:18px"><strong>${month}月${day}日（${weekday}）${data['開始時間']}～</strong></span><br />
           ${data['場所']}　　<a href="${data['リンク（自動入力）']}" target="_blank"><strong>詳細はこちら</strong></a><br />
           ${data['出演者']}<br />
-          M.チャージ  ¥${mCharge}<br /><br />
+          M.チャージ  ¥${mCharge}<br />
+          <br />
           ${formattedComment}<br />
         </p>
         <p>&nbsp;</p>
