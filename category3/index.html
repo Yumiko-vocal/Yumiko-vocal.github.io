@@ -156,10 +156,10 @@
           data[headers[j]] = row[j];
         }
         // 日付と曜日を取得
-        const year = ${data['年']}
-        const month = ${data['月']}
-        const day = ${data['日']}
-        const weekday = getWeekday($year, $month, $day)
+        const year = data['年'];
+        const month = data['月'];
+        const day = data['日'];
+        const weekday = getWeekday($year, $month, $day);
 
         // 必要なデータをHTMLとして追加
         const html = `
