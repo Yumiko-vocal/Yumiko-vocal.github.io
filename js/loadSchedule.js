@@ -29,11 +29,11 @@ fetch(csvUrl)
       const weekday = getWeekday(year, month, day);
 
       // チャージの3桁カンマ
-      const mCharge = Number(data['Mチャージ'])?.toLocaleString?.() ?? '';
+      const mCharge = Number(data['Mチャージ（自動入力）'])?.toLocaleString?.() ?? '';
 
       // ポスターがあれば掲載する
-      const posterImg = data['ポスター']
-        ? `<img src="${data['ポスター']}" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">`
+      const posterImg = data['ポスターのリンク']
+        ? `<img src="${data['ポスターのリンク']}" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">`
         : '';
 
       // 必要なデータをHTMLとして追加
@@ -41,7 +41,7 @@ fetch(csvUrl)
         <p class="highlight-background">
           ${posterImg}
           <span style="font-size:18px"><strong>${month}月${day}日（${weekday}）${data['開始時間']}～</strong></span><br />
-          ${data['場所']}　　<a href="${data['リンク']}" target="_blank"><strong>詳細はこちら</strong></a><br />
+          ${data['場所']}　　<a href="${data['リンク（自動入力）']}" target="_blank"><strong>詳細はこちら</strong></a><br />
           ${data['出演者']}<br />
           M.チャージ  ¥${mCharge}<br />
           ${data['コメント']}<br />
