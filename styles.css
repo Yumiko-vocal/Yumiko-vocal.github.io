@@ -1060,3 +1060,13 @@ h1 {
   }
 }
 
+table {
+  border-collapse: collapse;
+}
+table th {
+  border: solid 1px black;/*実線 1px 黒*/
+  background: lightpink;/*背景色*/
+}
+table tr {
+  border: solid 1px black;/*実線 1px 黒*/
+}
