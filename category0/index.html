@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="Shift_JIS"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
@@ -33,43 +34,36 @@
 <div id="siteNavi"><a href="../">トップページ</a> ＞ フライヤー</div>
 
 
+<div id="text1"></div>
+
+
+
+<h3>Jazz Live</h3>
+
 <div id="text1">
 
-<p>　<a href="#a4">過去のフライヤーはこちら</a></p>
-
-
+<!-- <p><img src="/img/poster_20201104.jpg" alt="" /></p> -->
 
 </div>
 
 
 
-<h3>ジャズライブ</h3>
 
+<h3>Others</h3>
 <div id="text2">
+  <!-- 音フェスタポスター1 -->
+  <img src="/img/others/poster_20190301_otofesta.jpg" alt="poster" class="zoomable" style="float:right;width:auto;height:120px">
+  <!-- 音フェスタポスター2 -->
+  <img src="/img/others/poster_20191201_otofesta.jpg" alt="poster" class="zoomable" style="float:right;width:auto;height:120px">
 
-<p><img src="/img/poster_20201104.jpg" alt="" /></p>
+<!-- <p>&nbsp;</p> -->
+
 
 </div>
 
 
 
-
-<h3>音フェスタ</h3>
-
-<div id="text3">
-
-<!-- 音フェスタポスター1 -->
-<p><img src="/img/poster-otofesta-201903.jpg" style="width: 496px" alt="" /></p>
-<p>&nbsp;</p>
-
-<!-- 音フェスタポスター2 -->
-<p><img src="/img/poster-otofesta-201912.jpg" style="width: 496px" alt="" /></p>
-
-</div>
-
-
-
-<h3><a name="a4" >過去のフライヤー</a></h3>
+<!-- <h3 id="a4">過去のフライヤー</h3>
 
 
 <div id="categorylist">
@@ -94,7 +88,11 @@
 <p class="more"><a href="../category24/24_2017/">≫続きを読む</a><br class="FloatEnd" /></p>
 </div>
 
-</div></div>
+</div> -->
+
+
+</div>
+
 
 
 
@@ -113,6 +111,16 @@
 </div></div>
 
 
+<!-- モーダル（画像が拡大表示される場所） -->
+<div id="img-modal">
+  <!-- 閉じるためのバツボタン（×） -->
+  <span id="close-modal">&times;</span>
+  <!-- 拡大表示される画像。クリックされた画像の内容がここに入る -->
+  <img id="modal-img" src="">
+</div>
+
+
+
 <!-- 読み込みスクリプト -->
 <script>
   function includeHTML(id, file) {
@@ -126,6 +134,7 @@
   includeHTML("menu-include", "/category0/menu.html");
   includeHTML("footer-include", "/category0/footer.html");
 </script>
+<script src="/js/modal.js">//ポップアップやアニメーションの挙動</script>
 
 
 </body>
