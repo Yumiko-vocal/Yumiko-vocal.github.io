@@ -1064,10 +1064,14 @@ table {
   border-collapse: collapse;
   border: solid 1px pink;
 }
-table th {
-  /*border: solid 1px pink;/*実線 1px 黒*/
-  background: lightpink;/*背景色*/
 }
 table tr {
   /*border: solid 1px black;/*実線 1px 黒*/
 }
+table th {
+  background: lightpink;/*背景色*/
+}
+table td {
+  background: #FFFFFF;/*背景色*/
+}
+
