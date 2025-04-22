@@ -1079,14 +1079,14 @@ table td {
 }
 
 /* ポスターギャラリー用の修飾 */
-#img-gallery {
+.img-gallery {
   display: flex;
   gap: 5px; /* 画像の隙間 */
   flex-wrap: wrap; /* 折り返し対応 */
   justify-content: left; /* 画像を中央に揃える（必要に応じて） */
 }
 
-#img-gallery .zoomable {
+.img-gallery .zoomable {
   height: 200px;
   width: auto;
 }
