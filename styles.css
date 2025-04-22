@@ -1060,10 +1060,10 @@ h1 {
   }
 }
 
+/* テーブルの様式設定 */
 table {
   border-collapse: collapse;
   border: solid 1px pink;
-}
 }
 table tr {
   /*border: solid 1px black;/*実線 1px 黒*/
