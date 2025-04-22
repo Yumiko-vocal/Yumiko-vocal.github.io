@@ -1065,7 +1065,7 @@ table {
   border: solid 1px pink;
 }
 table th {
-  border: solid 1px pink;/*実線 1px 黒*/
+  /*border: solid 1px pink;/*実線 1px 黒*/
   background: lightpink;/*背景色*/
 }
 table tr {
