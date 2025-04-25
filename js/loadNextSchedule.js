@@ -66,7 +66,7 @@ fetch(csvUrl)
 
     const html = `
       <p class="${highlightClass}">
-        <span style="text-align: center;"><Strong>${extraComment}</Strong></span>
+        <div style="text-align: center;"><Strong>${extraComment}</Strong></div>
         ${posterImg}
         <span style="font-size:18px"><strong>${eventDate.getFullYear()}年${eventDate.getMonth() + 1}月${eventDate.getDate()}日（${weekday}）${data['開始時間']}～</strong></span><br />
         ${data['場所']}　　${data['電話番号（自動入力）']}<br />
