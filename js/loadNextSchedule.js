@@ -9,6 +9,7 @@ fetch(csvUrl)
     const headers = rows[0].split(',');
 
     const today = new Date();
+    today.setHours(0, 0, 0, 0);  // 時分秒をリセット
     const events = [];
 
     for (let i = 1; i < rows.length; i++) {
