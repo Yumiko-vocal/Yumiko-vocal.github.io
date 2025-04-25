@@ -1012,7 +1012,7 @@ h1 {
 }
 
 .highlight-background2 {
-  background-color: lightpink; /* 薄いピンク */
+  background-color: #FFE4E1; /* 薄いピンク */
   padding: 10px; /* 内部余白 */
   border-radius: 5px; /* 角を丸く */
 }
