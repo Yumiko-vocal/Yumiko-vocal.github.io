@@ -50,7 +50,7 @@ fetch(csvUrl)
     let extraComment = ''; // とりあえず空定義
     let highlightClass = 'highlight-background'; // 通常背景
     if (eventDate.getTime()===today.getTime()){
-      extraComment = 'Live Jazz Tonight – Don’t Miss It!<br />';
+      extraComment = 'Live Jazz Tonight – Don’t Miss It!<br /><br />';
       highlightClass = 'highlight-background2';
     }
 
@@ -65,8 +65,8 @@ fetch(csvUrl)
     const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
 
     const html = `
-      <p class="${highlightClass}">
-        <div style="text-align: center;"><Strong>${extraComment}</Strong></div>
+      <div class="${highlightClass}">
+        <div style="text-align: center;font-size:20px"><Strong>${extraComment}</Strong></div>
         ${posterImg}
         <span style="font-size:18px"><strong>${eventDate.getFullYear()}年${eventDate.getMonth() + 1}月${eventDate.getDate()}日（${weekday}）${data['開始時間']}～</strong></span><br />
         ${data['場所']}　　${data['電話番号（自動入力）']}<br />
@@ -75,7 +75,7 @@ fetch(csvUrl)
         M.チャージ  ¥${mCharge}<br />
         <br />
         ${formattedComment}<br />
-      </p>
+      </div>
       <p>&nbsp;</p>
       <p>&nbsp;</p>
     `;
