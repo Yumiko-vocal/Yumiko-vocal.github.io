@@ -48,9 +48,10 @@ fetch(csvUrl)
 
     // 当日であった場合のコメント判定
     let extraComment = ''; // とりあえず空定義
+    let highlightClass = 'highlight-background'; // 通常背景
     if (eventDate===today){
-      extraComment = 'Live Jazz Tonight – Don’t Miss It!'
-      const highlightClass = isToday ? 'highlight-background2' : 'highlight-background';
+      extraComment = 'Live Jazz Tonight – Don’t Miss It!';
+      highlightClass = 'highlight-background2';
     }
 
     // ポスターがあれば掲載する
