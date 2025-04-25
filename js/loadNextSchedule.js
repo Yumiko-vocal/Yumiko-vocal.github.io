@@ -46,6 +46,13 @@ fetch(csvUrl)
     const weekday = getWeekday(eventDate.getFullYear(), eventDate.getMonth() + 1, eventDate.getDate());
     const mCharge = Number(data['Mチャージ（自動入力）'])?.toLocaleString?.() ?? '';
 
+    // 当日であった場合のコメント判定
+    let extraComment = ''; // とりあえず空定義
+    if (eventDate===today){
+      extraComment = 'Live Jazz Tonight – Don’t Miss It!'
+      const highlightClass = isToday ? 'highlight-background2' : 'highlight-background';
+    }
+
     // ポスターがあれば掲載する
     const posterImg = data['ポスターのリンク']
       ? `<img src="${data['ポスターのリンク']}" alt="poster" class="zoomable" style="float:right;width:120px;height:auto">`
@@ -57,7 +64,8 @@ fetch(csvUrl)
     const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
 
     const html = `
-      <p class="highlight-background">
+      <p class="${highlightClass}">
+        <span style="text-align: center;"><Strong>${extraComment}</Strong></span>
         ${posterImg}
         <span style="font-size:18px"><strong>${eventDate.getFullYear()}年${eventDate.getMonth() + 1}月${eventDate.getDate()}日（${weekday}）${data['開始時間']}～</strong></span><br />
         ${data['場所']}　　${data['電話番号（自動入力）']}<br />
