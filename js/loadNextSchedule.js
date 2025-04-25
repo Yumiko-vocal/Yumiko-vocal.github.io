@@ -49,7 +49,7 @@ fetch(csvUrl)
     // 当日であった場合のコメント判定
     let extraComment = ''; // とりあえず空定義
     let highlightClass = 'highlight-background'; // 通常背景
-    if (eventDate===today){
+    if (eventDate.getTime()===today.getTime()){
       extraComment = 'Live Jazz Tonight – Don’t Miss It!';
       highlightClass = 'highlight-background2';
     }
