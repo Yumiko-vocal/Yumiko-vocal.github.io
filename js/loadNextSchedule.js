@@ -50,7 +50,7 @@ fetch(csvUrl)
     let extraComment = ''; // とりあえず空定義
     let highlightClass = 'highlight-background'; // 通常背景
     if (eventDate.getTime()===today.getTime()){
-      extraComment = 'Live Jazz Tonight – Don’t Miss It!<br /><br />';
+      extraComment = 'Jazz Live Tonight – Don’t Miss It!<br /><br />';
       highlightClass = 'highlight-background2';
     }
 
