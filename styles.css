@@ -1004,8 +1004,15 @@ h1 {
   border-radius: 8px; /* 角を丸く */
 }
 
+/* bachgroundに色をつける */
 .highlight-background {
   background-color: #f0f0f0; /* 薄いグレー */
+  padding: 10px; /* 内部余白 */
+  border-radius: 5px; /* 角を丸く */
+}
+
+.highlight-background2 {
+  background-color: lightpink; /* 薄いピンク */
   padding: 10px; /* 内部余白 */
   border-radius: 5px; /* 角を丸く */
 }
