@@ -32,7 +32,7 @@ fetch(csvUrl)
       // 新しい日付オブジェクトを作成
       const eventDate = new Date(year, month - 1, day);
       if (isNaN(eventDate)) continue;  // 無効な日付の場合はスキップ
-      if (year !== 2026) continue;  // 2026年以外の場合はスキップ
+
 
       // イベント情報を格納
       if (year === 2026) events.push({ data, eventDate });  // 2026年以外の場合はスキップ
