@@ -35,7 +35,8 @@ fetch(csvUrl)
       if (year !== 2026) continue;  // 2026年以外の場合はスキップ
 
       // イベント情報を格納
-      events.push({ data, eventDate });
+      if (year === 2026) events.push({ data, eventDate });  // 2026年以外の場合はスキップ
+      // events.push({ data, eventDate });
     }
 
     // 日付順にイベントを昇順でソート
