@@ -11,6 +11,9 @@ fetch(csvUrl)
     const container = document.getElementById('schedule');  // 表示先のHTML要素を取得
     const headers = rows[0].split(',');  // 最初の行（ヘッダー）をカンマで分割して取得
 
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);  // 時分秒をリセット
+    
     const events = [];  // イベント情報を格納する配列
 
     // 2行目以降のデータを処理
@@ -35,7 +38,8 @@ fetch(csvUrl)
 
 
       // イベント情報を格納
-      if (year === 2026) events.push({ data, eventDate });  // 2026年以外の場合はスキップ
+      if (eventDate >= today) events.push({ data, eventDate });  // 2026年以外の場合はスキップ
+      // if (year === 2026) events.push({ data, eventDate });  // 2026年以外の場合はスキップ
       // events.push({ data, eventDate });
     }
 
@@ -58,8 +62,6 @@ fetch(csvUrl)
       const formattedComment = data['コメント']?.replace(/(\r\n|\n|\r)/g, '<br />') ?? '';
 
       // 各イベントをHTML形式で作成
-      // <span style="font-size:18px"><strong>${eventDate.getMonth() + 1}月${eventDate.getDate()}日（${weekday}）${data['開始時間']}～</strong></span><br />
-
       eventHtml += `
         <p class="highlight-background">
           ${posterImg}
@@ -78,6 +80,14 @@ fetch(csvUrl)
 
     // 作成したHTMLを挿入
     container.innerHTML = eventHtml;
+
+
+
+
+
+
+
+    
   })
   .catch(error => console.error('Error:', error));
 
