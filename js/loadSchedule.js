@@ -17,7 +17,7 @@ fetch(csvUrl)
     const events = [];  // イベント情報を格納する配列
 
     // 2行目以降のデータを処理
-    for (let i = 1; i < rows.length; i++) {
+    for (let i = 1; i < rows.length+1; i++) {
       const row = rows[i].split(',');  // 行ごとにカンマで分割
       if (row.length !== headers.length) continue;  // ヘッダーと列数が一致しない行はスキップ
 
