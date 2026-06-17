@@ -12,7 +12,7 @@ fetch(csvUrl)
     today.setHours(0, 0, 0, 0);  // 時分秒をリセット
     const events = [];
 
-    for (let i = 1; i < rows.length+1; i++) {
+    for (let i = 1; i < rows.length; i++) {
       const row = rows[i].split(',');
       if (row.length !== headers.length) continue;
 
