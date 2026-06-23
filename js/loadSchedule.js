@@ -106,22 +106,33 @@ function processCSV(csvData) {
   let processedData = '';
   let inQuotes = false;
 
-  // 一文字ずつ処理
   for (let i = 0; i < csvData.length; i++) {
     const char = csvData[i];
-    // ダブルクォーテーションで囲まれている場合
-    if (char === '"' && (i === 0 || csvData[i - 1] !== '"')) {
+
+    // "" を考慮
+    if (char === '"' && (i + 1 >= csvData.length || csvData[i + 1] !== '"')) {
       inQuotes = !inQuotes;
     }
-    // 引用符の中に改行があれば XIGYO に置き換え
-    if (char === '\n' && inQuotes) { processedData += ' XIgYO0 ';
-    } else { processedData += char;
+
+    // ダブルクォート内の改行を退避
+    if (char === '\n' && inQuotes) {
+      processedData += ' XIgYO0 ';
+    }
+    // ダブルクォート内のカンマを退避
+    else if (char === ',' && inQuotes) {
+      processedData += ' KANMA0 ';
+    }
+    else {
+      processedData += char;
     }
   }
-  
-  // 改行で分割
+
   const rows = processedData.split('\n');
-  // 最後に XIGYO を改行に戻し"を削除する
-  const result = rows.map(row => row.replace(/ XIgYO0 /g, '\n').replace(/"/g,''));
-  return result;
+
+  return rows.map(row =>
+    row
+      .replace(/ XIgYO0 /g, '\n')
+      .replace(/ KANMA0 /g, ',')
+      .replace(/"/g, '')
+  );
 }
